@@ -27,3 +27,21 @@ def add_customer():
             
         new_customer = Customer(new_name, new_father_name, customer_id, balance)
         list_customers.append(new_customer)
+        
+def find_customer():
+    customer_id = input("Enter yor ID: ")
+    for customer in list_customers :
+        if customer.customer_id == customer_id:
+            print("Customer found: ")
+            print(customer)
+            return
+    print("Customer not found.")
+    
+def show_customers():
+    if not list_customers:
+        print("No Customer available.")
+    else:
+        for customer in list_customers:
+            print("List Customers: ")
+            print(customer)
+            
