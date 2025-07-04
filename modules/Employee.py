@@ -43,3 +43,25 @@ def show_employees():
     else :
         for employee in list_employees :
             print(employee)
+
+def edit_employee() : 
+    eid = input("Enter employee ID: ")
+    for employee in list_employees :
+        if employee.employee_id == eid :
+            new_name = input("Enter new name: ")
+            employee.name = new_name 
+            new_salary = input("Enter new salary: ")
+            employee.salary = new_salary 
+            print("Name updated successfully.")
+            return
+        
+    print("Employee not found.") 
+
+def delete_employee() : 
+    eid = input("Enter employee ID: ")
+    for employee in list_employees :
+        if employee.employee_id == eid :
+            list_employees.remove(employee)
+            print("Employee deleted.")
+            return
+    print("Employee not found.") 
