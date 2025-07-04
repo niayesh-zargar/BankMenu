@@ -15,7 +15,7 @@ while True :
     print('10. Edit Employee Info (By ID) ')
     print('11. Delete Employee (By ID) ')
     print('12. Exit')
-    
+    print("-----------------------")
     choice = input('Enter the number of your option: ')
     
     try :
